@@ -12,7 +12,7 @@ def home():
     sec_pass = 0
     if request.method == 'POST':
         password = int(request.form.get('password'))
-        if (password<8 and password>94):
+        if (password<8 or password>94):
             flash("Password length must be greater than 8 and less than 128",'warning')
         else:
             s1 = string.ascii_lowercase
